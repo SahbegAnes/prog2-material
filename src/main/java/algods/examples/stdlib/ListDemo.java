@@ -63,15 +63,18 @@ public class ListDemo {
 
     public static void main(String[] args) {
         System.out.println("Demo für ArrayList:");
-        runDemo(new ArrayList<>());
+        List<Integer> l1 = new ArrayList<>();
+        runDemo(l1);
         System.out.println();
 
         System.out.println("Demo für Vector:");
-        runDemo(new Vector<>());
+        List<Integer> l2 = new Vector<>();
+        runDemo(l2);
         System.out.println();
 
         System.out.println("Demo für LinkedList:");
-        runDemo(new LinkedList<>());
+        List<Integer> l3 = new LinkedList<>();
+        runDemo(l3);
         System.out.println();
     }
 }
