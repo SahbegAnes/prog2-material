@@ -30,9 +30,18 @@ public class Element {
     public void add(int d) {
         Element e = new Element();
         e.data = d;
-        this.next = e;
-        this.prev = e;
+
+        Element last = this.prev;
+
+        last.next = e;
         e.next = this;
-        e.prev = this;
+        this.prev = e;
+        e.prev = last;
+    }
+
+    /// Liefert die Länge der Liste.
+    public int size() {
+        // TODO
+        return 0;
     }
 }

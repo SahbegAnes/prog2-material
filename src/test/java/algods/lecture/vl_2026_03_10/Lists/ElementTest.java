@@ -16,7 +16,7 @@ public class ElementTest {
     }
 
     @Test
-    public void testList_add() {
+    public void testList_add_single() {
         Element anchor = new Element();
 
         anchor.add(42);
@@ -27,5 +27,26 @@ public class ElementTest {
         assertEquals(42, anchor.next.data);
         assertEquals(anchor, anchor.next.next);
         assertEquals(anchor, anchor.prev.prev);
+    }
+
+    @Test
+    public void testList_add_multiple() {
+        Element anchor = new Element();
+
+        anchor.add(42);
+        anchor.add(23);
+        anchor.add(38);
+
+        assertEquals(0, anchor.data);
+        assertEquals(42, anchor.next.data);
+        assertEquals(23, anchor.next.next.data);
+        assertEquals(38, anchor.next.next.next.data);
+        assertEquals(anchor, anchor.next.next.next.next);
+
+        assertEquals(0, anchor.data);
+        assertEquals(38, anchor.prev.data);
+        assertEquals(23, anchor.prev.prev.data);
+        assertEquals(42, anchor.prev.prev.prev.data);
+        assertEquals(anchor, anchor.prev.prev.prev.prev);
     }
 }
