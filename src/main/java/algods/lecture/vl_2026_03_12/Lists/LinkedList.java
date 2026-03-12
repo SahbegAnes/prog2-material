@@ -1,4 +1,4 @@
-package algods.lecture.vl_2026_03_10.Lists;
+package algods.lecture.vl_2026_03_12.Lists;
 
 public class LinkedList {
     Element anchor;
